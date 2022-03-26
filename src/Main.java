@@ -8,7 +8,7 @@ public class Main {
 
         File temp = new File("D:\\GAMES\\temp");
         if (temp.mkdir()) {
-            directMessage(temp);
+            System.out.println("Директория temp создана");
         }
 
         File tempFile = new File("D:\\GAMES\\temp", "temp.txt");
@@ -20,10 +20,14 @@ public class Main {
             System.out.println(ex.getMessage());
         }
 
+        directMessage(temp);
+        fileMessage(tempFile);
+
         File saveGames = new File("D:\\GAMES\\saveGames");
         if (saveGames.mkdir()) {
             directMessage(saveGames);
         }
+        
         File src = new File("D:\\GAMES\\src");
         if (src.mkdir()) {
             directMessage(src);
